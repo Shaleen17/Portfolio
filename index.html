@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shaleen Singh - Portfolio</title>
+    <link rel="icon" type="image/jpeg" href="Shaleen_Favicorn.jpg" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[#111d32] text-white overflow-x-hidden">
+    <div id="glow"></div>
+
+    <!-- Navigation -->
+    <nav
+      id="navbar"
+      class="fixed top-0 w-full bg-[rgba(6,19,43,0.95)] backdrop-blur-lg z-50 py-4 transition-all duration-300"
+    >
+      <div
+        class="max-w-7xl mx-auto flex justify-center items-center px-4 sm:px-6 lg:px-8"
+      >
+        <div class="hidden md:flex">
+          <ul
+            class="nav-menu flex list-none gap-8 bg-white/10 px-8 py-3 rounded-full border border-white/20"
+          >
+            <li>
+              <a
+                href="#home"
+                class="relative text-white no-underline font-medium transition-colors hover:text-[#64b5f6]"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#education"
+                class="relative text-white no-underline font-medium transition-colors hover:text-[#64b5f6]"
+                >Education</a
+              >
+            </li>
+            <li>
+              <a
+                href="#experience"
+                class="relative text-white no-underline font-medium transition-colors hover:text-[#64b5f6]"
+                >Experience</a
+              >
+            </li>
+            <li>
+              <a
+                href="#profession"
+                class="relative text-white no-underline font-medium transition-colors hover:text-[#64b5f6]"
+                >Profession</a
+              >
+            </li>
+            <li>
+              <a
+                href="#projects"
+                class="relative text-white no-underline font-medium transition-colors hover:text-[#64b5f6]"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="Resume.pdf"
+                download="Resume.pdf"
+                class="relative text-white no-underline font-medium transition-colors hover:text-[#64b5f6]"
+                >Resume</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="relative text-white no-underline font-medium transition-colors hover:text-[#64b5f6]"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="md:hidden flex items-center w-full justify-end">
+          <button id="mobile-menu-button" class="z-[1001] p-2">
+            <span
+              class="block w-6 h-0.5 bg-white my-1 transition-transform duration-300"
+            ></span>
+            <span
+              class="block w-6 h-0.5 bg-white my-1 transition-opacity duration-300"
+            ></span>
+            <span
+              class="block w-6 h-0.5 bg-white my-1 transition-transform duration-300"
+            ></span>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden fixed top-0 left-0 w-full h-screen bg-[rgba(6,19,43,0.98)] backdrop-blur-xl transform -translate-x-full transition-transform duration-300 ease-in-out"
+      >
+        <ul class="flex flex-col items-center justify-center h-full gap-8">
+          <li>
+            <a href="#home" class="mobile-link text-2xl text-white">About</a>
+          </li>
+          <li>
+            <a href="#education" class="mobile-link text-2xl text-white"
+              >Education</a
+            >
+          </li>
+          <li>
+            <a href="#experience" class="mobile-link text-2xl text-white"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a href="#profession" class="mobile-link text-2xl text-white"
+              >Profession</a
+            >
+          </li>
+          <li>
+            <a href="#projects" class="mobile-link text-2xl text-white"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="Resume.pdf"
+              download="Resume.pdf"
+              class="mobile-link text-2xl text-white"
+              >Resume</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="mobile-link text-2xl text-white"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center justify-center text-center px-4 sm:px-6 lg:px-8 relative z-10"
+    >
+      <div class="max-w-3xl">
+        <div
+          class="w-48 h-48 mx-auto mb-8 rounded-full border-4 border-white/30 overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+        >
+          <img
+            src="shalen_image.png"
+            alt="Profile Image"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <h1
+          class="hero-font text-4xl sm:text-5xl md:text-6xl font-bold mb-4 tracking-wider"
+        >
+          Shaleen Singh
+        </h1>
+        <p
+          id="subtitle"
+          class="hero-font text-lg sm:text-xl text-white/90 mb-8 font-light min-h-[28px] sm:min-h-[32px]"
+        ></p>
+        <div class="flex justify-center gap-4 mt-8">
+          <a
+            href="https://www.linkedin.com/in/shaleen17/"
+            aria-label="LinkedIn"
+            class="w-12 h-12 flex items-center justify-center bg-white/10 text-white rounded-full text-xl transition-all duration-300 border border-white/20 hover:bg-white/20 hover:-translate-y-1"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcRzDQthlvkMRRSVnBlhBcbrRmTFkxkHHtJwPvpBRwbCHnhjbffMtlSMJRXBDGHRWpbSVrzdB"
+            aria-label="Email"
+            class="w-12 h-12 flex items-center justify-center bg-white/10 text-white rounded-full text-xl transition-all duration-300 border border-white/20 hover:bg-white/20 hover:-translate-y-1"
+            ><i class="fas fa-envelope"></i
+          ></a>
+          <a
+            href="https://leetcode.com/u/Shaleen17/"
+            aria-label="leetcode"
+            class="w-12 h-12 flex items-center justify-center bg-white/10 text-white rounded-full text-xl transition-all duration-300 border border-white/20 hover:bg-white/20 hover:-translate-y-1"
+            ><i class="fas fa-graduation-cap"></i
+          ></a>
+          <a
+            href="https://github.com/Shaleen17"
+            aria-label="GitHub"
+            class="w-12 h-12 flex items-center justify-center bg-white/10 text-white rounded-full text-xl transition-all duration-300 border border-white/20 hover:bg-white/20 hover:-translate-y-1"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="fade-in">
+        <h2 class="text-4xl md:text-5xl font-light mb-12 text-left">
+          About Me
+        </h2>
+        <div class="max-w-3xl text-lg text-white/90 leading-relaxed">
+          <p>
+            As a curious and ambitious incoming BTech student, I'm passionate
+            about exploring the intersection of technology, business, and
+            innovation. Currently learning Java and Python, I'm excited to dive
+            deeper into the world of programming and software development.<br /><br />With
+            a keen interest in startups and entrepreneurship, I'm always looking
+            to learn from founders, innovators, and industry leaders. I'm also
+            fascinated by the power of databases and their role in shaping the
+            digital landscape.<br /><br />Through my academic journey and
+            beyond, I aim to develop a strong foundation in computer science,
+            cultivate a entrepreneurial mindset, and make meaningful connections
+            with like-minded individuals.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section
+      id="education"
+      class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+    >
+      <div class="fade-in">
+        <h2 class="text-4xl md:text-5xl font-light mb-12 text-left">
+          Education
+        </h2>
+        <div class="relative pl-4">
+          <div class="timeline">
+            <div class="timeline-item relative mb-12 pl-8">
+              <div class="text-lg font-semibold text-[#64b5f6] mb-2">
+                August 2024 – July 2028
+              </div>
+              <h3 class="text-xl text-[#90caf9] mb-2">
+                Graduation from
+                <a
+                  target="_blank"
+                  class="text-blue-400 hover:underline"
+                  href="https://mu.ac.in/"
+                  >University of Mumbai</a
+                >
+              </h3>
+              <p class="text-white/80 leading-relaxed">
+                B.E. degree in Information Technology
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section
+      id="experience"
+      class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+    >
+      <div class="fade-in">
+        <h2 class="text-4xl md:text-5xl font-light mb-12 text-left">
+          Experience
+        </h2>
+        <div class="relative pl-4 timeline">
+          <div class="timeline-item relative mb-12 pl-8">
+            <div class="text-lg font-semibold text-[#64b5f6] mb-2">
+              Campus Ambassador
+            </div>
+            <h3 class="text-xl text-[#90caf9] mb-2">E-Cell, IIT Bombay</h3>
+            <p class="text-white/80 leading-relaxed">
+              July 2025-Present 2 month <br />Mumbai, Maharashtra, India
+            </p>
+          </div>
+          <div class="timeline-item relative mb-12 pl-8">
+            <div class="text-lg font-semibold text-[#64b5f6] mb-2">
+              Technical Team Member
+            </div>
+            <h3 class="text-xl text-[#90caf9] mb-2">
+              Axios E-Cell TCET Mumbai
+            </h3>
+            <p class="text-white/80 leading-relaxed">
+              July 2025-Present 3 month
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Section -->
+    <section
+      id="profession"
+      class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+    >
+      <div class="fade-in">
+        <h2 class="text-4xl md:text-5xl font-light mb-12 text-left">
+          Profession
+        </h2>
+        <div class="space-y-8">
+          <div
+            class="bg-white/10 rounded-2xl p-8 sm:p-12 border border-white/20 transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/[.15] hover:shadow-2xl"
+          >
+            <div
+              class="w-full h-48 bg-[#8C3B2A] rounded-xl mb-8 flex items-center justify-center text-2xl text-white font-bold"
+            >
+              <div class="flex flex-col items-center gap-2">
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-16 h-16 rounded-xl bg-white/20 flex items-center justify-center"
+                  >
+                    <img
+                      src="BrandLogo.jpg"
+                      alt="Tirth Sutra Logo"
+                      class="w-12 h-12 object-contain"
+                      onerror="this.parentElement.innerHTML = '<i class=\'fas fa-om text-4xl text-white\'></i>'; this.remove();"
+                    />
+                  </div>
+                  <span class="text-3xl">The Puranic Path</span>
+                </div>
+                <a
+                  href="https://shaleen17.github.io/Tirth-Sutra/"
+                  target="_blank"
+                  class="block text-base mt-2 text-white hover:underline"
+                  >Visit Website
+                  <i class="fas fa-external-link-alt ml-1 text-xs"></i
+                ></a>
+              </div>
+            </div>
+            <h3 class="text-2xl font-semibold mb-2">Founder & CEO</h3>
+            <div class="text-[#64b5f6] mb-4">July 2025 – Present</div>
+            <div class="text-white/70 mb-4">
+              Founder and CEO of The Puranic Path
+            </div>
+            <p class="text-white/80 leading-relaxed">
+              The Puranic Path is your ultimate guide to exploring the sacred
+              tirths of India. Our platform helps you plan your pilgrimage with
+              ease, discover hidden gems, and connect with a community of
+              devotees. We are dedicated to providing a seamless and enriching
+              pilgrimage experience, bridging the gap between devotion and
+              technology to make spiritual travel more accessible for everyone.
+            </p>
+          </div>
+          <div
+            class="bg-white/10 rounded-2xl p-8 sm:p-12 border border-white/20 transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/[.15] hover:shadow-2xl"
+          >
+            <div
+              class="w-full h-48 bg-[rgba(244,182,61,0.9)] rounded-xl mb-8 flex items-center justify-center text-2xl text-gray-800 font-bold"
+            >
+              <div class="flex items-center gap-4">
+                <div class="w-16 h-16 rounded-xl overflow-hidden">
+                  <img
+                    src="1707668168449.jpeg"
+                    alt="Rent Zoo Logo"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <span>RentZoo</span>
+              </div>
+            </div>
+            <h3 class="text-2xl font-semibold mb-2">
+              Product Manager and Tech Assistant
+            </h3>
+            <div class="text-[#64b5f6] mb-4">June 2025 – Present</div>
+            <div class="text-white/70 mb-4">
+              Product Manager and Tech Assistant at RentZoo, Hyderabad, India
+            </div>
+            <p class="text-white/80 leading-relaxed">
+              RentZoo is revolutionizing India’s unorganized, offline equipment
+              rental industry by creating a reliable, tech-first ecosystem for
+              heavy machinery access. In a market traditionally dominated by
+              delays, middlemen, and lack of trust, RentZoo brings clarity,
+              speed, and convenience. The platform offers a seamless, cab-like
+              booking experience where users can log in, choose from a wide
+              range of machines including JCBs, excavators, and tractors
+              estimate rental costs, and book instantly, all in just a few
+              taps.<br /><br />Our system is designed for the real people
+              driving India’s progress contractors, builders, and last-mile
+              operators who face daily challenges in accessing quality equipment
+              on time. RentZoo ensures every vendor is verified, every
+              transaction is secure, and every customer receives complete
+              support, from booking to completion. With features like real-time
+              tracking, digital payments, and transparent pricing, we eliminate
+              friction and build trust across every step.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ... (previous code remains the same) ... -->
+
+    <!-- Professional Section -->
+    <section id="profession" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <!-- ... (profession section code remains the same) ... -->
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="fade-in">
+            <h2 class="text-4xl md:text-5xl font-light mb-12 text-left">Projects</h2>
+            <div class="flex flex-col items-center justify-center min-h-[40vh] text-center bg-white/5 border border-white/10 rounded-2xl p-8">
+                <div class="w-16 h-16 border-4 border-white/20 border-t-white rounded-full animate-spin mb-8"></div>
+                <h3 class="text-3xl font-semibold text-white mb-4">Projects are Coming Soon ...!</h3>
+                <p class="text-white/70 max-w-md">I'm currently working hard on some exciting new projects. Please check back later to see my work!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Technologies Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <!-- ... (rest of the code remains the same) ... -->
+
+
+
+    <!-- Skills & Technologies Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="fade-in">
+        <h2 class="text-4xl md:text-5xl font-light mb-16 text-center">
+          Skills & Technologies
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/10"
+          >
+            <h3 class="text-xl font-semibold mb-4 text-white">Languages</h3>
+            <p class="text-white/80">
+              Java, PHP, JavaScript, GoLang, Shell, Python
+            </p>
+          </div>
+          <div
+            class="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/10"
+          >
+            <h3 class="text-xl font-semibold mb-4 text-white">Frameworks</h3>
+            <p class="text-white/80">React, Node.js, Spring Boot, Express</p>
+          </div>
+          <div
+            class="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/10"
+          >
+            <h3 class="text-xl font-semibold mb-4 text-white">Databases</h3>
+            <p class="text-white/80">
+              MySQL, Redis, ClickHouse, MongoDB, Elasticsearch
+            </p>
+          </div>
+          <div
+            class="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/10"
+          >
+            <h3 class="text-xl font-semibold mb-4 text-white">
+              Cloud & DevOps
+            </h3>
+            <p class="text-white/80">
+              AWS, Jenkins, Docker, GitHub, Nginx, Kafka
+            </p>
+          </div>
+          <div
+            class="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/10"
+          >
+            <h3 class="text-xl font-semibold mb-4 text-white">Tools</h3>
+            <p class="text-white/80">Git, Jira, Postman, VS Code, Linux</p>
+          </div>
+          <div
+            class="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/10"
+          >
+            <h3 class="text-xl font-semibold mb-4 text-white">
+              Architecture & Patterns
+            </h3>
+            <p class="text-white/80">
+              Microservices, RESTful APIs, Monolithic Architecture, Modular
+              Design, API-First Approach
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Get in Touch Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="fade-in">
+        <div
+          class="bg-black/30 rounded-3xl p-8 md:p-16 backdrop-blur-xl border border-white/10"
+        >
+          <h2 class="text-4xl md:text-5xl font-semibold text-center mb-12">
+            Get in <span class="text-[#64b5f6]">Touch</span>
+          </h2>
+          <form
+            action="https://formsubmit.co/shaleensingh238@gmail.com"
+            method="POST"
+            class="max-w-xl mx-auto"
+          >
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+              <div class="relative">
+                <i
+                  class="fas fa-user absolute left-4 top-1/2 -translate-y-1/2 text-white/50"
+                ></i>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  class="w-full bg-white/5 border border-white/15 rounded-xl py-4 pr-4 pl-12 text-white placeholder-white/50 focus:border-[#64b5f6] focus:bg-white/10 outline-none transition-all"
+                  required
+                />
+              </div>
+              <div class="relative">
+                <i
+                  class="fas fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-white/50"
+                ></i>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  class="w-full bg-white/5 border border-white/15 rounded-xl py-4 pr-4 pl-12 text-white placeholder-white/50 focus:border-[#64b5f6] focus:bg-white/10 outline-none transition-all"
+                  required
+                />
+              </div>
+            </div>
+            <div class="relative mb-6">
+              <i
+                class="fas fa-book absolute left-4 top-1/2 -translate-y-1/2 text-white/50"
+              ></i>
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                class="w-full bg-white/5 border border-white/15 rounded-xl py-4 pr-4 pl-12 text-white placeholder-white/50 focus:border-[#64b5f6] focus:bg-white/10 outline-none transition-all"
+                required
+              />
+            </div>
+            <div class="relative mb-8">
+              <i
+                class="fas fa-comment-dots absolute left-4 top-6 text-white/50"
+              ></i>
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                rows="6"
+                class="w-full bg-white/5 border border-white/15 rounded-xl py-4 pr-4 pl-12 text-white placeholder-white/50 focus:border-[#64b5f6] focus:bg-white/10 outline-none transition-all resize-vertical"
+                required
+              ></textarea>
+            </div>
+            <div class="text-center">
+              <button
+                type="submit"
+                class="bg-gradient-to-r from-[#64b5f6] to-[#42a5f5] text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/30 flex items-center gap-3 mx-auto"
+              >
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="fade-in">
+        <h2 class="text-4xl md:text-5xl font-light mb-12 text-left">Contact</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="bg-white/10 rounded-2xl p-8 text-center border border-white/20 transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/[.15]"
+          >
+            <i class="fab fa-linkedin-in text-3xl mb-4 text-[#64b5f6]"></i>
+            <h3 class="text-xl font-semibold mb-2">LinkedIn</h3>
+            <a
+              href="https://www.linkedin.com/in/shaleen-singh-552413313/"
+              class="text-white/80 hover:text-[#64b5f6] hover:underline transition-colors"
+              >Connect on LinkedIn</a
+            >
+          </div>
+          <div
+            class="bg-white/10 rounded-2xl p-8 text-center border border-white/20 transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/[.15]"
+          >
+            <i class="fas fa-envelope text-3xl mb-4 text-[#64b5f6]"></i>
+            <h3 class="text-xl font-semibold mb-2">Email</h3>
+            <a
+              href="mailto:shaleensingh238@gmail.com"
+              class="text-white/80 hover:text-[#64b5f6] hover:underline transition-colors break-all"
+              >shaleensingh238@gmail.com</a
+            >
+          </div>
+          <div
+            class="bg-white/10 rounded-2xl p-8 text-center border border-white/20 transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/[.15]"
+          >
+            <i class="fas fa-graduation-cap text-3xl mb-4 text-[#64b5f6]"></i>
+            <h3 class="text-xl font-semibold mb-2">LeetCode</h3>
+            <a
+              href="https://leetcode.com/u/Shaleen17/"
+              class="text-white/80 hover:text-[#64b5f6] hover:underline transition-colors"
+              >View Profile</a
+            >
+          </div>
+          <div
+            class="bg-white/10 rounded-2xl p-8 text-center border border-white/20 transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/[.15]"
+          >
+            <i class="fab fa-github text-3xl mb-4 text-[#64b5f6]"></i>
+            <h3 class="text-xl font-semibold mb-2">GitHub</h3>
+            <a
+              href="https://github.com/Shaleen17"
+              class="text-white/80 hover:text-[#64b5f6] hover:underline transition-colors"
+              >View Projects</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button
+      id="scrollTopBtn"
+      class="hidden fixed bottom-8 right-8 w-12 h-12 bg-[#64b5f6] text-white rounded-full items-center justify-center text-xl transition-all duration-300 z-50 hover:bg-[#42a5f5] hover:-translate-y-1"
+    >
+      <i class="fas fa-chevron-up"></i>
+</button>
+<script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+/* A few custom styles to perfectly match the original design */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #111d32 0%, #132442 100%);
+  position: relative; /* Needed for the glow effect */
+}
+.hero-font {
+  font-family: "Poppins", sans-serif;
+}
+#glow {
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  width: 800px;
+  height: 800px;
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle,
+    rgba(29, 78, 216, 0.15) 0%,
+    transparent 60%
+  );
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  transition: background 0.3s;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.navbar.scrolled {
+  background-color: #132442;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #64b5f6;
+  transition: width 0.3s ease;
+}
+.nav-menu a:hover::after {
+  width: 100%;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(to bottom, #64b5f6, #1976d2);
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -10px; /* Adjusted for Tailwind positioning */
+  top: 0.5rem;
+  width: 12px;
+  height: 12px;
+  background: #64b5f6;
+  border-radius: 9999px;
+  border: 3px solid #1e3c72;
+}
