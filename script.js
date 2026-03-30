@@ -9,9 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     : [];
   const glow = document.getElementById("glow");
   const subtitleEl = document.getElementById("subtitle");
-  const secretBubble = document.getElementById("secret-bubble");
-  const secretModal = document.getElementById("secret-modal");
-  const closeSecretModal = document.getElementById("close-secret-modal");
 
   function setGlowPosition(x, y) {
     if (!glow) return;
@@ -127,58 +124,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.querySelectorAll(".fade-in").forEach((element) => {
     observer.observe(element);
-  });
-
-  function openSecretModal() {
-    if (!secretModal) return;
-    secretModal.classList.remove("hidden");
-    secretModal.classList.add("flex");
-    secretModal.setAttribute("aria-hidden", "false");
-    document.body.classList.add("overflow-hidden");
-  }
-
-  function closeModal() {
-    if (!secretModal) return;
-    secretModal.classList.add("hidden");
-    secretModal.classList.remove("flex");
-    secretModal.setAttribute("aria-hidden", "true");
-    document.body.classList.remove("overflow-hidden");
-  }
-
-  const searchParams = new URLSearchParams(window.location.search);
-  const foundSecret =
-    searchParams.get("secret") === "found" ||
-    localStorage.getItem("portfolioSecretUnlocked") === "true";
-
-  if (foundSecret) {
-    localStorage.setItem("portfolioSecretUnlocked", "true");
-    secretBubble?.classList.remove("hidden");
-    secretBubble?.classList.add("flex");
-
-    if (searchParams.get("secret") === "found") {
-      openSecretModal();
-      const cleanUrl = new URL(window.location.href);
-      cleanUrl.searchParams.delete("secret");
-      window.history.replaceState(
-        {},
-        document.title,
-        cleanUrl.pathname + cleanUrl.hash,
-      );
-    }
-  }
-
-  secretBubble?.addEventListener("click", openSecretModal);
-  closeSecretModal?.addEventListener("click", closeModal);
-
-  secretModal?.addEventListener("click", (event) => {
-    if (event.target === secretModal) {
-      closeModal();
-    }
-  });
-
-  window.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      closeModal();
-    }
   });
 });

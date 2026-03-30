@@ -196,16 +196,6 @@ body {
   box-shadow: 0 20px 36px rgba(220, 38, 38, 0.32);
 }
 
-.secret-modal-card {
-  position: relative;
-  width: min(100%, 42rem);
-  padding: 1.5rem;
-  border-radius: 1.5rem;
-  border: 1px solid rgba(100, 181, 246, 0.18);
-  background: rgba(17, 29, 50, 0.96);
-  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.35);
-}
-
 .secret-page-shell {
   min-height: 100vh;
   background:
@@ -472,8 +462,7 @@ body {
     padding: 1.1rem;
   }
 
-  .skill-card,
-  .secret-modal-card {
+  .skill-card {
     border-radius: 1.25rem;
   }
 
