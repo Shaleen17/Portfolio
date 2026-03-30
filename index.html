@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
@@ -21,7 +21,6 @@
   <body class="bg-[#111d32] text-white overflow-x-hidden">
     <div id="glow"></div>
 
-    <!-- Navigation -->
     <nav
       id="navbar"
       class="fixed top-0 w-full bg-[rgba(6,19,43,0.95)] backdrop-blur-lg z-50 py-4 transition-all duration-300"
@@ -31,7 +30,7 @@
       >
         <div class="hidden md:flex">
           <ul
-            class="nav-menu flex list-none gap-8 bg-white/10 px-8 py-3 rounded-full border border-white/20"
+            class="nav-menu flex list-none gap-6 xl:gap-8 bg-white/10 px-7 xl:px-8 py-3 rounded-full border border-white/20"
           >
             <li>
               <a
@@ -63,17 +62,16 @@
             </li>
             <li>
               <a
-                href="#projects"
+                href="#skills-resume"
                 class="relative text-white no-underline font-medium transition-colors hover:text-[#64b5f6]"
-                >Projects</a
+                >Skills</a
               >
             </li>
             <li>
               <a
-                href="Resume.pdf"
-                download="Resume.pdf"
+                href="#projects"
                 class="relative text-white no-underline font-medium transition-colors hover:text-[#64b5f6]"
-                >Resume</a
+                >Projects</a
               >
             </li>
             <li>
@@ -85,8 +83,14 @@
             </li>
           </ul>
         </div>
+
         <div class="md:hidden flex items-center w-full justify-end">
-          <button id="mobile-menu-button" class="z-[1001] p-2">
+          <button
+            id="mobile-menu-button"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            class="z-[1001] p-2 rounded-xl border border-white/15 bg-white/5"
+          >
             <span
               class="block w-6 h-0.5 bg-white my-1 transition-transform duration-300"
             ></span>
@@ -99,15 +103,13 @@
           </button>
         </div>
       </div>
-      <!-- Mobile Menu -->
+
       <div
         id="mobile-menu"
         class="hidden md:hidden fixed top-0 left-0 w-full h-screen bg-[rgba(6,19,43,0.98)] backdrop-blur-xl transform -translate-x-full transition-transform duration-300 ease-in-out"
       >
         <ul class="flex flex-col items-center justify-center h-full gap-8">
-          <li>
-            <a href="#home" class="mobile-link text-2xl text-white">About</a>
-          </li>
+          <li><a href="#home" class="mobile-link text-2xl text-white">About</a></li>
           <li>
             <a href="#education" class="mobile-link text-2xl text-white"
               >Education</a
@@ -124,8 +126,18 @@
             >
           </li>
           <li>
+            <a href="#skills-resume" class="mobile-link text-2xl text-white"
+              >Skills</a
+            >
+          </li>
+          <li>
             <a href="#projects" class="mobile-link text-2xl text-white"
               >Projects</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="mobile-link text-2xl text-white"
+              >Contact</a
             >
           </li>
           <li>
@@ -136,23 +148,17 @@
               >Resume</a
             >
           </li>
-          <li>
-            <a href="#contact" class="mobile-link text-2xl text-white"
-              >Contact</a
-            >
-          </li>
         </ul>
       </div>
     </nav>
 
-    <!-- Hero Section -->
     <section
       id="home"
-      class="min-h-screen flex items-center justify-center text-center px-4 sm:px-6 lg:px-8 relative z-10"
+      class="min-h-screen flex items-center justify-center text-center px-4 sm:px-6 lg:px-8 relative z-10 pt-24"
     >
-      <div class="max-w-3xl">
+      <div class="max-w-4xl">
         <div
-          class="w-48 h-48 mx-auto mb-8 rounded-full border-4 border-white/30 overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+          class="w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 mx-auto mb-8 rounded-full border-4 border-white/30 overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl"
         >
           <img
             src="shalen_image.png"
@@ -160,8 +166,13 @@
             class="w-full h-full object-cover"
           />
         </div>
+        <p
+          class="text-[#64b5f6] uppercase tracking-[0.35em] text-xs sm:text-sm mb-4"
+        >
+          Portfolio
+        </p>
         <h1
-          class="hero-font text-4xl sm:text-5xl md:text-6xl font-bold mb-4 tracking-wider"
+          class="hero-font text-4xl sm:text-5xl md:text-[3.35rem] font-bold mb-4 tracking-wider"
         >
           Shaleen Singh
         </h1>
@@ -169,27 +180,56 @@
           id="subtitle"
           class="hero-font text-lg sm:text-xl text-white/90 mb-8 font-light min-h-[28px] sm:min-h-[32px]"
         ></p>
+        <p
+          class="max-w-2xl mx-auto text-white/70 leading-relaxed text-sm sm:text-base"
+        >
+          Product-minded builder with a strong interest in technology,
+          entrepreneurship, databases, and scalable digital experiences.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4 mt-8">
+          <a
+            href="#contact"
+            class="rounded-full bg-gradient-to-r from-[#64b5f6] to-[#42a5f5] px-6 py-3 text-sm sm:text-base font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/30"
+          >
+            Contact Me
+          </a>
+          <a
+            href="Resume.pdf"
+            download="Resume.pdf"
+            class="rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm sm:text-base font-semibold transition-all duration-300 hover:-translate-y-1 hover:bg-white/15"
+          >
+            Download Resume
+          </a>
+        </div>
+
         <div class="flex justify-center gap-4 mt-8">
           <a
             href="https://www.linkedin.com/in/shaleen17/"
+            target="_blank"
+            rel="noreferrer"
             aria-label="LinkedIn"
             class="w-12 h-12 flex items-center justify-center bg-white/10 text-white rounded-full text-xl transition-all duration-300 border border-white/20 hover:bg-white/20 hover:-translate-y-1"
             ><i class="fab fa-linkedin-in"></i
           ></a>
           <a
-            href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcRzDQthlvkMRRSVnBlhBcbrRmTFkxkHHtJwPvpBRwbCHnhjbffMtlSMJRXBDGHRWpbSVrzdB"
+            href="mailto:shaleensingh238@gmail.com"
             aria-label="Email"
             class="w-12 h-12 flex items-center justify-center bg-white/10 text-white rounded-full text-xl transition-all duration-300 border border-white/20 hover:bg-white/20 hover:-translate-y-1"
             ><i class="fas fa-envelope"></i
           ></a>
           <a
             href="https://leetcode.com/u/Shaleen17/"
-            aria-label="leetcode"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LeetCode"
             class="w-12 h-12 flex items-center justify-center bg-white/10 text-white rounded-full text-xl transition-all duration-300 border border-white/20 hover:bg-white/20 hover:-translate-y-1"
             ><i class="fas fa-graduation-cap"></i
           ></a>
           <a
             href="https://github.com/Shaleen17"
+            target="_blank"
+            rel="noreferrer"
             aria-label="GitHub"
             class="w-12 h-12 flex items-center justify-center bg-white/10 text-white rounded-full text-xl transition-all duration-300 border border-white/20 hover:bg-white/20 hover:-translate-y-1"
             ><i class="fab fa-github"></i
@@ -198,7 +238,6 @@
       </div>
     </section>
 
-    <!-- About Section -->
     <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <div class="fade-in">
         <h2 class="text-4xl md:text-5xl font-light mb-12 text-left">
@@ -209,20 +248,22 @@
             As a curious and ambitious incoming BTech student, I'm passionate
             about exploring the intersection of technology, business, and
             innovation. Currently learning Java and Python, I'm excited to dive
-            deeper into the world of programming and software development.<br /><br />With
-            a keen interest in startups and entrepreneurship, I'm always looking
-            to learn from founders, innovators, and industry leaders. I'm also
-            fascinated by the power of databases and their role in shaping the
-            digital landscape.<br /><br />Through my academic journey and
-            beyond, I aim to develop a strong foundation in computer science,
-            cultivate a entrepreneurial mindset, and make meaningful connections
-            with like-minded individuals.
+            deeper into the world of programming and software development.
+            <br /><br />
+            With a keen interest in startups and entrepreneurship, I'm always
+            looking to learn from founders, innovators, and industry leaders.
+            I'm also fascinated by the power of databases and their role in
+            shaping the digital landscape.
+            <br /><br />
+            Through my academic journey and beyond, I aim to develop a strong
+            foundation in computer science, cultivate an entrepreneurial
+            mindset, and make meaningful connections with like-minded
+            individuals.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Education -->
     <section
       id="education"
       class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
@@ -235,12 +276,13 @@
           <div class="timeline">
             <div class="timeline-item relative mb-12 pl-8">
               <div class="text-lg font-semibold text-[#64b5f6] mb-2">
-                August 2024 – July 2028
+                August 2024 - July 2028
               </div>
               <h3 class="text-xl text-[#90caf9] mb-2">
                 Graduation from
                 <a
                   target="_blank"
+                  rel="noreferrer"
                   class="text-blue-400 hover:underline"
                   href="https://mu.ac.in/"
                   >University of Mumbai</a
@@ -255,7 +297,6 @@
       </div>
     </section>
 
-    <!-- Experience -->
     <section
       id="experience"
       class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
@@ -271,7 +312,9 @@
             </div>
             <h3 class="text-xl text-[#90caf9] mb-2">E-Cell, IIT Bombay</h3>
             <p class="text-white/80 leading-relaxed">
-              July 2025-Present 2 month <br />Mumbai, Maharashtra, India
+              July 2025 - Present
+              <br />
+              Mumbai, Maharashtra, India
             </p>
           </div>
           <div class="timeline-item relative mb-12 pl-8">
@@ -281,15 +324,12 @@
             <h3 class="text-xl text-[#90caf9] mb-2">
               Axios E-Cell TCET Mumbai
             </h3>
-            <p class="text-white/80 leading-relaxed">
-              July 2025-Present 3 month
-            </p>
+            <p class="text-white/80 leading-relaxed">July 2025 - Present</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Professional Section -->
     <section
       id="profession"
       class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
@@ -300,13 +340,13 @@
         </h2>
         <div class="space-y-8">
           <div
-            class="bg-white/10 rounded-2xl p-8 sm:p-12 border border-white/20 transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/[.15] hover:shadow-2xl"
+            class="bg-white/10 rounded-2xl p-6 sm:p-8 md:p-12 border border-white/20 transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/[.15] hover:shadow-2xl"
           >
             <div
-              class="w-full h-48 bg-[#5b3f3b] rounded-xl mb-8 flex items-center justify-center text-2xl text-white font-bold"
+              class="w-full min-h-[12rem] bg-[#5b3f3b] rounded-xl mb-8 flex items-center justify-center text-2xl text-white font-bold p-6"
             >
-              <div class="flex flex-col items-center gap-2">
-                <div class="flex items-center gap-4">
+              <div class="flex flex-col items-center gap-2 text-center">
+                <div class="flex flex-col sm:flex-row items-center gap-4">
                   <div
                     class="w-16 h-16 rounded-xl bg-white/20 flex items-center justify-center"
                   >
@@ -314,7 +354,11 @@
                       src="BrandLogo.jpg"
                       alt="Tirth Sutra Logo"
                       class="w-12 h-12 object-contain"
-                      onerror="this.parentElement.innerHTML = '<i class=\'fas fa-om text-4xl text-white\'></i>'; this.remove();"
+                      onerror="
+                        this.parentElement.innerHTML =
+                          '<i class=\'fas fa-om text-4xl text-white\'></i>';
+                        this.remove();
+                      "
                     />
                   </div>
                   <span class="text-3xl">Tirth Sutra</span>
@@ -322,6 +366,7 @@
                 <a
                   href="https://shaleen17.github.io/Tirth-Sutra/"
                   target="_blank"
+                  rel="noreferrer"
                   class="block text-base mt-2 text-white hover:underline"
                   >Visit Website
                   <i class="fas fa-external-link-alt ml-1 text-xs"></i
@@ -329,26 +374,27 @@
               </div>
             </div>
             <h3 class="text-2xl font-semibold mb-2">Founder</h3>
-            <div class="text-[#64b5f6] mb-4">July 2025 – Present</div>
-            <div class="text-white/70 mb-4">
-              Founder of Tirth Sutra
-            </div>
+            <div class="text-[#64b5f6] mb-4">July 2025 - Present</div>
+            <div class="text-white/70 mb-4">Founder of Tirth Sutra</div>
             <p class="text-white/80 leading-relaxed">
-              Tirth Sutra is your ultimate guide to exploring the sacred
-              tirths of India. Our platform helps you plan your pilgrimage with
-              ease, discover hidden gems, and connect with a community of
-              devotees. We are dedicated to providing a seamless and enriching
-              pilgrimage experience, bridging the gap between devotion and
-              technology to make spiritual travel more accessible for everyone.
+              Tirth Sutra is your ultimate guide to exploring the sacred tirths
+              of India. Our platform helps you plan your pilgrimage with ease,
+              discover hidden gems, and connect with a community of devotees. We
+              are dedicated to providing a seamless and enriching pilgrimage
+              experience, bridging the gap between devotion and technology to
+              make spiritual travel more accessible for everyone.
             </p>
           </div>
+
           <div
-            class="bg-white/10 rounded-2xl p-8 sm:p-12 border border-white/20 transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/[.15] hover:shadow-2xl"
+            class="bg-white/10 rounded-2xl p-6 sm:p-8 md:p-12 border border-white/20 transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/[.15] hover:shadow-2xl"
           >
             <div
-              class="w-full h-48 bg-[rgba(244,182,61,0.9)] rounded-xl mb-8 flex items-center justify-center text-2xl text-gray-800 font-bold"
+              class="w-full min-h-[12rem] bg-[rgba(244,182,61,0.9)] rounded-xl mb-8 flex items-center justify-center text-2xl text-gray-800 font-bold p-6"
             >
-              <div class="flex items-center gap-4">
+              <div
+                class="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left"
+              >
                 <div class="w-16 h-16 rounded-xl overflow-hidden">
                   <img
                     src="1707668168449.jpeg"
@@ -362,123 +408,229 @@
             <h3 class="text-2xl font-semibold mb-2">
               Product Manager and Tech Assistant
             </h3>
-            <div class="text-[#64b5f6] mb-4">June 2025 – Present</div>
+            <div class="text-[#64b5f6] mb-4">June 2025 - Present</div>
             <div class="text-white/70 mb-4">
               Product Manager and Tech Assistant at RentZoo, Hyderabad, India
             </div>
             <p class="text-white/80 leading-relaxed">
-              RentZoo is revolutionizing India’s unorganized, offline equipment
+              RentZoo is revolutionizing India's unorganized, offline equipment
               rental industry by creating a reliable, tech-first ecosystem for
               heavy machinery access. In a market traditionally dominated by
               delays, middlemen, and lack of trust, RentZoo brings clarity,
-              speed, and convenience. The platform offers a seamless, cab-like
-              booking experience where users can log in, choose from a wide
-              range of machines including JCBs, excavators, and tractors
-              estimate rental costs, and book instantly, all in just a few
-              taps.<br /><br />Our system is designed for the real people
-              driving India’s progress contractors, builders, and last-mile
-              operators who face daily challenges in accessing quality equipment
-              on time. RentZoo ensures every vendor is verified, every
-              transaction is secure, and every customer receives complete
-              support, from booking to completion. With features like real-time
-              tracking, digital payments, and transparent pricing, we eliminate
-              friction and build trust across every step.
+              speed, and convenience.
+              <br /><br />
+              The platform offers a seamless, cab-like booking experience where
+              users can log in, choose from a wide range of machines including
+              JCBs, excavators, and tractors, estimate rental costs, and book
+              instantly in just a few taps.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ... (previous code remains the same) ... -->
-
-    <!-- Professional Section -->
-    <section id="profession" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <!-- ... (profession section code remains the same) ... -->
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div class="fade-in">
-            <h2 class="text-4xl md:text-5xl font-light mb-12 text-left">Projects</h2>
-            <div class="flex flex-col items-center justify-center min-h-[40vh] text-center bg-white/5 border border-white/10 rounded-2xl p-8">
-                <div class="w-16 h-16 border-4 border-white/20 border-t-white rounded-full animate-spin mb-8"></div>
-                <h3 class="text-3xl font-semibold text-white mb-4">Projects are Coming Soon ...!</h3>
-                <p class="text-white/70 max-w-md">I'm currently working hard on some exciting new projects. Please check back later to see my work!</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills & Technologies Section -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <!-- ... (rest of the code remains the same) ... -->
-
-
-
-    <!-- Skills & Technologies Section -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section
+      id="skills-resume"
+      class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+    >
       <div class="fade-in">
-        <h2 class="text-4xl md:text-5xl font-light mb-16 text-center">
-          Skills & Technologies
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div
-            class="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/10"
-          >
-            <h3 class="text-xl font-semibold mb-4 text-white">Languages</h3>
-            <p class="text-white/80">
-              Java, HTML, CSS, JavaScript, Python
+        <div
+          class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-12"
+        >
+          <div>
+            <h2 class="text-3xl md:text-4xl font-light text-left">
+              Skills & Resume
+            </h2>
+            <p class="text-white/70 mt-3 max-w-2xl">
+              Added in the same spirit as the reference portfolio, but tuned to
+              your current look and spacing.
             </p>
           </div>
-          <div
-            class="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/10"
-          >
-            <h3 class="text-xl font-semibold mb-4 text-white">Frameworks</h3>
-            <p class="text-white/80">Django </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 xl:grid-cols-[1.05fr_0.95fr] gap-8 items-start"
+        >
+          <div class="space-y-6">
+            <div class="skill-card fade-in-card">
+              <div
+                class="skill-icon bg-gradient-to-br from-[#64b5f6] to-[#42a5f5]"
+              >
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <div class="skill-content">
+                <div class="flex items-start justify-between gap-4 flex-wrap">
+                  <div>
+                    <h3 class="text-[1.45rem] font-semibold">Frontend Development</h3>
+                    <p class="text-white/70 mt-2">
+                      HTML, CSS, JavaScript, responsive layouts
+                    </p>
+                  </div>
+                  <span class="text-[#8cc8ff] text-lg font-semibold">88%</span>
+                </div>
+                <div class="mt-6">
+                  <div class="skill-bar">
+                    <span
+                      style="
+                        width: 88%;
+                        background: linear-gradient(90deg, #64b5f6, #42a5f5);
+                      "
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-card fade-in-card">
+              <div
+                class="skill-icon bg-gradient-to-br from-[#90caf9] to-[#64b5f6]"
+              >
+                <i class="fas fa-palette"></i>
+              </div>
+              <div class="skill-content">
+                <div class="flex items-start justify-between gap-4 flex-wrap">
+                  <div>
+                    <h3 class="text-[1.45rem] font-semibold">UI/UX Design</h3>
+                    <p class="text-white/70 mt-2">
+                      Wireframing, clean interfaces, user-friendly flows
+                    </p>
+                  </div>
+                  <span class="text-[#8cc8ff] text-lg font-semibold">82%</span>
+                </div>
+                <div class="mt-6">
+                  <div class="skill-bar">
+                    <span
+                      style="
+                        width: 82%;
+                        background: linear-gradient(90deg, #90caf9, #64b5f6);
+                      "
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-card fade-in-card">
+              <div
+                class="skill-icon bg-gradient-to-br from-[#5dade2] to-[#3498db]"
+              >
+                <i class="fas fa-code"></i>
+              </div>
+              <div class="skill-content">
+                <div class="flex items-start justify-between gap-4 flex-wrap">
+                  <div>
+                    <h3 class="text-[1.45rem] font-semibold">Backend & Databases</h3>
+                    <p class="text-white/70 mt-2">
+                      Django, MySQL, MongoDB, REST API basics
+                    </p>
+                  </div>
+                  <span class="text-[#8cc8ff] text-lg font-semibold">80%</span>
+                </div>
+                <div class="mt-6">
+                  <div class="skill-bar">
+                    <span
+                      style="
+                        width: 80%;
+                        background: linear-gradient(90deg, #5dade2, #3498db);
+                      "
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-card fade-in-card">
+              <div
+                class="skill-icon bg-gradient-to-br from-[#42a5f5] to-[#1976d2]"
+              >
+                <i class="fas fa-robot"></i>
+              </div>
+              <div class="skill-content">
+                <div class="flex items-start justify-between gap-4 flex-wrap">
+                  <div>
+                    <h3 class="text-[1.45rem] font-semibold">AI-Assisted Workflow</h3>
+                    <p class="text-white/70 mt-2">
+                      ChatGPT, GitHub Copilot, debugging, faster ideation
+                    </p>
+                  </div>
+                  <span class="text-[#8cc8ff] text-lg font-semibold">84%</span>
+                </div>
+                <div class="mt-6">
+                  <div class="skill-bar">
+                    <span
+                      style="
+                        width: 84%;
+                        background: linear-gradient(90deg, #42a5f5, #1976d2);
+                      "
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div
-            class="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/10"
-          >
-            <h3 class="text-xl font-semibold mb-4 text-white">Databases</h3>
-            <p class="text-white/80">
-              MySQL,MongoDB
-            </p>
-          </div>
-          <div
-            class="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/10"
-          >
-            <h3 class="text-xl font-semibold mb-4 text-white">
-              Cloud & DevOps
-            </h3>
-            <p class="text-white/80">
-              AWS
-            </p>
-          </div>
-          <div
-            class="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/10"
-          >
-            <h3 class="text-xl font-semibold mb-4 text-white">Tools</h3>
-            <p class="text-white/80">Git,Postman, VS Code, Linux</p>
-          </div>
-          <div
-            class="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/10"
-          >
-            <h3 class="text-xl font-semibold mb-4 text-white">
-              Architecture & Patterns
-            </h3>
-            <p class="text-white/80">
-              Microservices, RESTful APIs, Monolithic Architecture, Modular
-              Design, API-First Approach
-            </p>
+
+          <div class="resume-panel">
+            <div class="resume-header">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-file-lines text-xl"></i>
+                <span>Resume Viewer</span>
+              </div>
+            </div>
+            <div class="resume-frame-wrap">
+              <iframe
+                src="Resume.pdf#toolbar=1"
+                title="Resume Viewer"
+                class="resume-frame"
+              ></iframe>
+            </div>
+            <a href="Resume.pdf" download="Resume.pdf" class="resume-download">
+              <i class="fas fa-download"></i>
+              Download Resume
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Get in Touch Section -->
+    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="fade-in">
+        <h2 class="text-4xl md:text-5xl font-light mb-12 text-left">
+          Projects
+        </h2>
+        <div
+          class="flex flex-col items-center justify-center min-h-[40vh] text-center bg-white/5 border border-white/10 rounded-2xl p-8"
+        >
+          <div
+            class="w-16 h-16 border-4 border-white/20 border-t-white rounded-full animate-spin mb-8"
+          ></div>
+          <h3 class="text-3xl font-semibold text-white mb-4">
+            Projects are Coming Soon ...!
+          </h3>
+          <p class="text-white/70 max-w-md">
+            I'm currently working hard on some exciting new projects. Please
+            check back later to see my work!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="secret-zone" class="pt-4 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="fade-in text-center">
+        <a
+          href="secret.html"
+          class="danger-button inline-flex items-center justify-center px-6 sm:px-8 py-3.5 rounded-2xl text-base sm:text-lg font-bold"
+        >
+          <span class="mr-3">&#9888;</span>
+          DO NOT CLICK!
+          <span class="ml-3">&#9888;</span>
+        </a>
+      </div>
+    </section>
+
     <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <div class="fade-in">
         <div
-          class="bg-black/30 rounded-3xl p-8 md:p-16 backdrop-blur-xl border border-white/10"
+          class="bg-black/30 rounded-3xl p-6 sm:p-8 md:p-16 backdrop-blur-xl border border-white/10"
         >
           <h2 class="text-4xl md:text-5xl font-semibold text-center mb-12">
             Get in <span class="text-[#64b5f6]">Touch</span>
@@ -552,11 +704,12 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <div class="fade-in">
         <h2 class="text-4xl md:text-5xl font-light mb-12 text-left">Contact</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 sm:gap-8"
+        >
           <div
             class="bg-white/10 rounded-2xl p-8 text-center border border-white/20 transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/[.15]"
           >
@@ -564,6 +717,8 @@
             <h3 class="text-xl font-semibold mb-2">LinkedIn</h3>
             <a
               href="https://www.linkedin.com/in/shaleen-singh-552413313/"
+              target="_blank"
+              rel="noreferrer"
               class="text-white/80 hover:text-[#64b5f6] hover:underline transition-colors"
               >Connect on LinkedIn</a
             >
@@ -586,6 +741,8 @@
             <h3 class="text-xl font-semibold mb-2">LeetCode</h3>
             <a
               href="https://leetcode.com/u/Shaleen17/"
+              target="_blank"
+              rel="noreferrer"
               class="text-white/80 hover:text-[#64b5f6] hover:underline transition-colors"
               >View Profile</a
             >
@@ -597,6 +754,8 @@
             <h3 class="text-xl font-semibold mb-2">GitHub</h3>
             <a
               href="https://github.com/Shaleen17"
+              target="_blank"
+              rel="noreferrer"
               class="text-white/80 hover:text-[#64b5f6] hover:underline transition-colors"
               >View Projects</a
             >
@@ -605,13 +764,58 @@
       </div>
     </section>
 
-    <!-- Scroll to Top Button -->
+    <button
+      id="secret-bubble"
+      aria-label="Open secret connect popup"
+      class="fixed bottom-5 right-5 z-[60] hidden items-center justify-center w-14 h-14 rounded-full border border-[#7dbfff]/30 bg-gradient-to-br from-[#4a6cf7] to-[#3267ef] text-white text-xl shadow-lg shadow-blue-500/30 transition-all duration-300 hover:-translate-y-1"
+    >
+      <i class="far fa-comment-dots"></i>
+    </button>
+
+    <div
+      id="secret-modal"
+      class="fixed inset-0 z-[70] hidden items-center justify-center px-4 bg-black/60 backdrop-blur-sm"
+      aria-hidden="true"
+    >
+      <div class="secret-modal-card">
+        <button
+          id="close-secret-modal"
+          aria-label="Close secret popup"
+          class="absolute right-4 top-4 w-10 h-10 rounded-full bg-white/10 border border-white/10 text-white/80 transition hover:bg-white/15"
+        >
+          <i class="fas fa-xmark"></i>
+        </button>
+        <div class="flex flex-col sm:flex-row gap-5 sm:gap-6 items-start">
+          <div
+            class="w-16 h-16 rounded-full bg-gradient-to-br from-[#4a6cf7] to-[#3267ef] flex items-center justify-center text-3xl shrink-0"
+          >
+            <i class="far fa-comment-dots"></i>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-xl sm:text-2xl font-semibold leading-tight">
+              Found my secret? Let's connect. I'd love to hear your thoughts!
+            </h3>
+            <a
+              href="https://www.linkedin.com/in/shaleen-singh-552413313/"
+              target="_blank"
+              rel="noreferrer"
+              class="mt-6 inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-[#64b5f6] to-[#42a5f5] px-6 py-4 text-base font-semibold shadow-lg shadow-blue-500/25 transition-all duration-300 hover:-translate-y-1"
+            >
+              <i class="fab fa-linkedin-in"></i>
+              Connect on LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <button
       id="scrollTopBtn"
-      class="hidden fixed bottom-8 right-8 w-12 h-12 bg-[#64b5f6] text-white rounded-full items-center justify-center text-xl transition-all duration-300 z-50 hover:bg-[#42a5f5] hover:-translate-y-1"
+      class="hidden fixed bottom-24 right-5 sm:bottom-8 sm:right-8 w-12 h-12 bg-[#64b5f6] text-white rounded-full items-center justify-center text-xl transition-all duration-300 z-50 hover:bg-[#42a5f5] hover:-translate-y-1"
     >
       <i class="fas fa-chevron-up"></i>
-</button>
-<script src="script.js"></script>
+    </button>
+
+    <script src="script.js"></script>
   </body>
 </html>
